@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: CE Strugglr 
 
 tagline: A text-focused Jekyll theme # it will display as the subtitle
 
@@ -23,10 +23,10 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
-
+url: "https://ahmadharoon-01.github.io"
+baseurl: "/ahmad-blog"
 github:
-  username: github_username # change to your GitHub username
+  username: "https://ahmadharoon-01.github.io"
 
 twitter:
   username: twitter_username # change to your Twitter username
@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
+  name: Ahmad Haroon
   email: example@domain.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
@@ -150,8 +150,7 @@ pwa:
 
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
+# The base URL of your sitebaseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
