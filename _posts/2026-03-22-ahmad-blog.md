@@ -1,5 +1,5 @@
 ---
 tittle: "CE Struggle"
-date: 2026-04-2
+date: 2026-03-22
 categories: [Blogging, Programing]
 
