@@ -17,14 +17,14 @@ import joblib
 # Loading file / reading  file
 sales_df = pd.read_csv("walmart sales prediction.csv")
 
-# changing date to computer format type:
+# Changing date to computer format type:
 sales_df['Date'] = pd.to_datetime(sales_df['Date'])
 
 # Making colums of month and year from date:
 sales_df['Month'] = sales_df['Date'].dt.month
 sales_df['Year'] = sales_df['Date'].dt.year
 
-# making column of high/medium/low from weekly sales
+# Making column of high/medium/low from weekly sales
 def categorize_sales(sale):
     if sale < 2000:
         return 'Low'
@@ -35,7 +35,7 @@ def categorize_sales(sale):
 
 sales_df['label'] = sales_df['Weekly_Sales'].apply(categorize_sales)
 
-# printing first few rows
+# Printing first few rows
 print(sales_df.head())
 
 print(sales_df.info())
@@ -49,12 +49,12 @@ plt.xlabel("Month")
 plt.ylabel("Record Count")
 plt.show()
 
-# count plot from label(medium/low/high)
+# Count plot from label(medium/low/high)
 sns.countplot(x = sales_df["label"])
 plt.title("Class Distribution (Sales Levels)")
 plt.show()
 
-# box plot between label and dept
+# Box plot between label and dept
 sns.boxplot(data=sales_df, x="label", y="Dept")
 plt.title("Department Distribution across Sales Levels")
 plt.show()
@@ -65,18 +65,18 @@ le = LabelEncoder()
 sales_df["label"] = le.fit_transform(sales_df["label"])
 sales_df["IsHoliday"] = le.fit_transform(sales_df["IsHoliday"])
 
-# one hot encoding(used for same purpose)
+# One hot encoding(used for same purpose)
 sales_df = sales_df.drop("Date", axis=1)
 sales_df = pd.get_dummies(sales_df, drop_first=True)
 print(sales_df.columns)
 
-# train test split for target variable
+# Train test split for target variable
 X = sales_df.drop(["label","Weekly_Sales"], axis=1)
 y = sales_df["label"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# decision tree classifier
+# Decision tree classifier
 dt_clf = DecisionTreeClassifier()
 dt_clf.fit(X_train, y_train)
 
@@ -84,7 +84,7 @@ dt_clf.fit(X_train, y_train)
 joblib.dump(dt_clf, "sales_class_dt_model.pkl")
 loaded_dt = joblib.load("sales_class_dt_model.pkl")
 
-# for loading data
+# For loading data
 y_pred = loaded_dt.predict(X_test)
 print(f"The prediction about dataset is  {y_pred[:15]}")
 
