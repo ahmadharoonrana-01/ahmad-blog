@@ -1,4 +1,7 @@
+layout: post
 Title: Beyond the Code: What the Walmart Project Taught Me
+date: 2026-04-03
+categories: tutorial
 The project was a success! My model could predict sales trends with high accuracy. But more than that, I learned the importance of Feature Engineering. I realized that holidays like Thanksgiving have a massive "spike" effect that simple models miss. This project gave me the confidence to move from data analysis to full-scale development.
 
 '''Impact of Seasonal Trends and Holidays on Retail Performance'''
