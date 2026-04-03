@@ -1,6 +1,6 @@
 
 layout:post
-Title: Predicting the Future: Why I Started with Machine Learning
+Title: 1 Predicting the Future: Why I Started with Machine Learning
 date:2026-03-23
 categories:tutorial
 ![Alt text for the image](/ahmad-blog/assets/images/images (1).jpg)
